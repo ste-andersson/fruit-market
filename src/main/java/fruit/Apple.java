@@ -24,6 +24,14 @@ public class Apple extends Fruit {
         this.seeds = seeds;
     }
 
+    public boolean getSeeds() {
+        return seeds;
+    }
+
+    public void setSeeds(boolean seeds) {
+        this.seeds = seeds;
+    }
+
     public void removeSeeds() {
         if(seeds) {
             seeds = false;
@@ -35,12 +43,12 @@ public class Apple extends Fruit {
 
     @Override
     public void makeJuice() {
-        String seedstatus;
+        String seedStatus;
         if(seeds) {
-            seedstatus = ", but there are seeds in the juice.";
+            seedStatus = ", but there are seeds in the juice.";
         } else {
-            seedstatus = " and it's free from seeds.";
+            seedStatus = " and it's free from seeds.";
         }
-        System.out.println("Apple juice has been made" + seedstatus);
+        System.out.println("Apple juice has been made" + seedStatus);
     }
 }
