@@ -33,8 +33,12 @@ public class Banana extends Fruit {
     }
 
     public void removePeel() {
-        peel = false;
-        System.out.println("The banana has been peeled.");
+        if(peel) {
+            peel = false;
+            System.out.println("The banana has been peeled.");
+        } else {
+            System.out.println("There was no peel to remove.");
+        }
     }
 
     @Override
